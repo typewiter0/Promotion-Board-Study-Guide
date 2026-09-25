@@ -703,7 +703,7 @@
         <input type="text" id="searchInput" placeholder="Search cadet material..." oninput="handleSearch()">
       </div>
       <select id="sectionSelect" onchange="applyFilters()">
-        <option value="ALL">All Sections (86 Cards)</option>
+        <option value="ALL">All Sections (85 Cards)</option>
         <option value="1">Section 1: General Knowledge</option>
         <option value="2">Section 2: Leadership</option>
         <option value="3">Section 3: Drill & Ceremonies</option>
@@ -732,7 +732,7 @@
   </div>
 
   <div class="stats-bar">
-    <span id="cardCounter">Card 1 of 86</span>
+    <span id="cardCounter">Card 1 of 85</span>
     <span id="masteryStats">Mastered: 0 | Practice: 0</span>
   </div>
 
@@ -929,18 +929,17 @@
     // Dataset with tailored distractor options for contextually realistic quiz generation
     const initialCards = [
       // Section 1: Cadet Creed & General Knowledge
-      { id: "s1_1", section: "1", cat: "Creed & General", q: "What is the JROTC Cadet Creed?", a: "\"I am an Army Junior ROTC cadet. I will always conduct myself to bring credit to my family, country, school, and corps of cadets. I am loyal and patriotic. I am the future of the United States of America. I do not lie, cheat or steal and will always be accountable for my actions and deeds. I will always practice good citizenship and patriotism. I will work hard to improve my mind and strengthen my body. I will seek the mantle of leadership and stand prepared to uphold the constitution and the American way of life. May God grant me the strength to always live by this creed.\"" },
-      { id: "s1_2", section: "1", cat: "Creed & General", q: "What year was the National Defense Act authorizing JROTC passed?", a: "1916", distractors: ["1945", "1973", "1903"] },
-      { id: "s1_3", section: "1", cat: "Creed & General", q: "What do the letters JROTC stand for?", a: "Junior Reserve Officers Training Corps", distractors: ["Joint Reserve Officers Training Command", "Junior ROTC Technical Corps", "Junior Reserve Officer Tactical Cadre"] },
-      { id: "s1_4", section: "1", cat: "Creed & General", q: "What is the mission of JROTC?", a: "To motivate young people to be better citizens.", distractors: ["To train future military officers only.", "To enforce discipline in high schools.", "To prepare cadets for college ROTC scholarships."] },
-      { id: "s1_5", section: "1", cat: "Creed & General", q: "What is the title of the instructor who is in charge of a school's JROTC unit?", a: "Senior Army Instructor (SAI)", distractors: ["Commandant of Cadets", "Army Instructor (AI)", "Battalion Commander"] },
-      { id: "s1_6", section: "1", cat: "Creed & General", q: "What uniform is worn to the Military Ball and/or other formal type function?", a: "Army Class A (Army Blue)", distractors: ["OCP Uniform", "Class B Uniform", "PT Uniform"] },
-      { id: "s1_7", section: "1", cat: "Creed & General", q: "What is the minimum cadet enrollment required for a school to have a JROTC program?", a: "At least 100 cadets or 10% of the student body, whichever is less.", distractors: ["50 cadets or 5% of student body", "200 cadets minimum", "75 cadets minimum"] },
-      { id: "s1_8", section: "1", cat: "Creed & General", q: "In what year was Public Law 93-165 passed allowing females to be counted towards the enrollment requirement for JROTC?", a: "1973", distractors: ["1916", "1964", "1980"] },
-      { id: "s1_9", section: "1", cat: "Creed & General", q: "What does the acronym NCO stand for?", a: "Non-Commissioned Officer", distractors: ["Naval Commissioned Officer", "Non-Combat Officer", "National Cadet Officer"] },
-      { id: "s1_10", section: "1", cat: "Creed & General", q: "Where is the \"position of honor\" where the senior ranking individual always sits or walks?", a: "On the right", distractors: ["On the left", "In the center", "At the front center"] },
-      { id: "s1_11", section: "1", cat: "Creed & General", q: "What are the seven Army Values?", a: "Loyalty, Duty, Respect, Selfless Service, Honor, Integrity, Personal Courage", distractors: ["Honor, Courage, Commitment, Loyalty, Discipline, Truth, Valor", "Duty, Honor, Country, Respect, Leadership, Courage, Teamwork", "Loyalty, Integrity, Valor, Leadership, Service, Discipline, Courage"] },
-      { id: "s1_12", section: "1", cat: "Creed & General", q: "What does LET stand for?", a: "Leadership Education Training", distractors: ["Leadership Executive Tactics", "Leadership Evaluation & Training", "Linear Education Track"] },
+      { id: "s1_1", section: "1", cat: "Creed & General", q: "What year was the National Defense Act authorizing JROTC passed?", a: "1916", distractors: ["1945", "1973", "1903"] },
+      { id: "s1_2", section: "1", cat: "Creed & General", q: "What do the letters JROTC stand for?", a: "Junior Reserve Officers Training Corps", distractors: ["Joint Reserve Officers Training Command", "Junior ROTC Technical Corps", "Junior Reserve Officer Tactical Cadre"] },
+      { id: "s1_3", section: "1", cat: "Creed & General", q: "What is the mission of JROTC?", a: "To motivate young people to be better citizens.", distractors: ["To train future military officers only.", "To enforce discipline in high schools.", "To prepare cadets for college ROTC scholarships."] },
+      { id: "s1_4", section: "1", cat: "Creed & General", q: "What is the title of the instructor who is in charge of a school's JROTC unit?", a: "Senior Army Instructor (SAI)", distractors: ["Commandant of Cadets", "Army Instructor (AI)", "Battalion Commander"] },
+      { id: "s1_5", section: "1", cat: "Creed & General", q: "What uniform is worn to the Military Ball and/or other formal type function?", a: "Army Class A (Army Blue)", distractors: ["OCP Uniform", "Class B Uniform", "PT Uniform"] },
+      { id: "s1_6", section: "1", cat: "Creed & General", q: "What is the minimum cadet enrollment required for a school to have a JROTC program?", a: "At least 100 cadets or 10% of the student body, whichever is less.", distractors: ["50 cadets or 5% of student body", "200 cadets minimum", "75 cadets minimum"] },
+      { id: "s1_7", section: "1", cat: "Creed & General", q: "In what year was Public Law 93-165 passed allowing females to be counted towards the enrollment requirement for JROTC?", a: "1973", distractors: ["1916", "1964", "1980"] },
+      { id: "s1_8", section: "1", cat: "Creed & General", q: "What does the acronym NCO stand for?", a: "Non-Commissioned Officer", distractors: ["Naval Commissioned Officer", "Non-Combat Officer", "National Cadet Officer"] },
+      { id: "s1_9", section: "1", cat: "Creed & General", q: "Where is the \"position of honor\" where the senior ranking individual always sits or walks?", a: "On the right", distractors: ["On the left", "In the center", "At the front center"] },
+      { id: "s1_10", section: "1", cat: "Creed & General", q: "What are the seven Army Values?", a: "Loyalty, Duty, Respect, Selfless Service, Honor, Integrity, Personal Courage", distractors: ["Honor, Courage, Commitment, Loyalty, Discipline, Truth, Valor", "Duty, Honor, Country, Respect, Leadership, Courage, Teamwork", "Loyalty, Integrity, Valor, Leadership, Service, Discipline, Courage"] },
+      { id: "s1_11", section: "1", cat: "Creed & General", q: "What does LET stand for?", a: "Leadership Education Training", distractors: ["Leadership Executive Tactics", "Leadership Evaluation & Training", "Linear Education Track"] },
 
       // Section 2: Leadership
       { id: "s2_1", section: "2", cat: "Leadership", q: "Define leadership.", a: "The ability to influence others in order to reach a goal.", distractors: ["Giving orders to subordinates without question.", "Managing administrative resources effectively.", "Setting strict rules and enforcing penalties."] },
