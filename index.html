@@ -6,6 +6,10 @@
   <title>JROTC Board Study Guide</title>
   <!-- FontAwesome Icons for Military UI Badges -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Army Style Google Fonts: Black Ops One & Chakra Petch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
       --army-green: #3B5323;
@@ -41,7 +45,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-family: 'Chakra Petch', system-ui, -apple-system, sans-serif;
     }
 
     body {
@@ -85,10 +89,11 @@
     }
 
     h1 {
+      font-family: 'Black Ops One', cursive, sans-serif;
       font-size: 1.8rem;
       color: var(--army-green);
-      font-weight: 800;
-      letter-spacing: 0.5px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       display: flex;
       align-items: center;
@@ -104,7 +109,9 @@
       font-size: 0.95rem;
       color: var(--text-muted);
       font-weight: 600;
-      margin-top: 2px;
+      margin-top: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
     .icon-btn {
@@ -137,13 +144,15 @@
     }
 
     .tab-btn {
+      font-family: 'Black Ops One', cursive, sans-serif;
+      letter-spacing: 1px;
       flex: 1;
       padding: 12px;
       border-radius: 10px;
       background-color: var(--card-bg);
       border: 2px solid var(--border-color);
       color: var(--text-muted);
-      font-weight: 700;
+      font-weight: 400;
       font-size: 1rem;
       cursor: pointer;
       display: flex;
@@ -160,7 +169,6 @@
       box-shadow: 0 4px 10px var(--shadow);
     }
 
-    /* Controls Grid */
     .controls-grid {
       display: flex;
       flex-direction: column;
@@ -197,7 +205,8 @@
       border: 1.5px solid var(--border-color);
       background-color: var(--input-bg);
       color: var(--text);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      font-weight: 600;
       outline: none;
     }
 
@@ -224,12 +233,14 @@
       color: var(--text);
       flex: 1;
       min-width: 220px;
+      font-weight: 600;
     }
 
     button.btn-army {
       background-color: var(--army-green);
       color: #ffffff;
       border: 1px solid var(--army-gold);
+      letter-spacing: 0.5px;
     }
 
     button.btn-army:hover {
@@ -240,6 +251,7 @@
       background-color: var(--army-gold);
       color: var(--army-black);
       border: none;
+      letter-spacing: 0.5px;
     }
 
     button.btn-gold:hover {
@@ -251,18 +263,21 @@
       gap: 8px;
       overflow-x: auto;
       padding-bottom: 4px;
+      align-items: center;
     }
 
     .pill {
       padding: 6px 14px;
       border-radius: 16px;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 700;
       background: var(--card-bg);
       border: 1.5px solid var(--border-color);
       color: var(--text-muted);
       cursor: pointer;
       white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .pill.active {
@@ -280,6 +295,8 @@
       font-weight: 700;
       color: var(--text-muted);
       margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .progress-bar-container {
@@ -355,14 +372,15 @@
     }
 
     .category-tag {
-      font-size: 0.75rem;
+      font-family: 'Black Ops One', cursive, sans-serif;
+      font-size: 0.8rem;
       text-transform: uppercase;
       letter-spacing: 1px;
       padding: 4px 12px;
       border-radius: 12px;
       background-color: rgba(59, 83, 35, 0.15);
       color: var(--army-green);
-      font-weight: 800;
+      font-weight: 400;
       border: 1px solid rgba(59, 83, 35, 0.3);
     }
 
@@ -387,8 +405,8 @@
     }
 
     .card-content {
-      font-size: 1.25rem;
-      line-height: 1.6;
+      font-size: 1.3rem;
+      line-height: 1.5;
       color: var(--text);
       margin: auto 0;
       overflow-y: auto;
@@ -438,9 +456,10 @@
     }
 
     .hint {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       font-style: italic;
+      font-weight: 600;
     }
 
     .mastery-controls {
@@ -458,6 +477,8 @@
       padding: 12px 14px;
       border-radius: 8px;
       font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .btn-known {
@@ -491,6 +512,9 @@
     .nav-controls button {
       padding: 10px 24px;
       font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     #quizView {
@@ -509,7 +533,7 @@
     }
 
     .quiz-question {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 20px;
       color: var(--text);
@@ -561,25 +585,27 @@
     }
 
     .score-badge {
-      font-size: 3rem;
-      font-weight: 800;
+      font-family: 'Black Ops One', cursive, sans-serif;
+      font-size: 3.5rem;
+      font-weight: 400;
       color: var(--army-gold);
       margin: 15px 0;
     }
 
     .rank-title {
+      font-family: 'Black Ops One', cursive, sans-serif;
       font-size: 1.4rem;
-      font-weight: 700;
+      font-weight: 400;
       color: var(--army-green);
       margin-bottom: 10px;
       text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     [data-theme="dark"] .rank-title {
       color: var(--army-gold);
     }
 
-    /* Modal Styling */
     .modal-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -617,9 +643,11 @@
     }
 
     .modal-title {
+      font-family: 'Black Ops One', cursive, sans-serif;
       font-size: 1.25rem;
-      font-weight: bold;
+      font-weight: 400;
       color: var(--text);
+      letter-spacing: 0.5px;
     }
 
     .modal-close {
@@ -642,6 +670,8 @@
       font-weight: 700;
       margin-bottom: 4px;
       color: var(--text);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
 
     .form-group input, .form-group textarea, .form-group select {
@@ -651,7 +681,8 @@
       border: 1.5px solid var(--border-color);
       background: var(--input-bg);
       color: var(--text);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      font-weight: 600;
     }
 
     .form-group textarea {
@@ -661,7 +692,7 @@
 
     @media (max-width: 600px) {
       .scene { height: 440px; }
-      .card-content { font-size: 1.1rem; }
+      .card-content { font-size: 1.15rem; }
       .search-filter-row { flex-direction: column; }
     }
   </style>
@@ -674,7 +705,7 @@
     <div class="header-content">
       <div class="top-bar">
         <button class="icon-btn" onclick="toggleTheme()" id="themeToggleBtn">
-          <i class="fa-solid fa-moon"></i> <span>Dark Mode</span>
+          <i class="fa-solid fa-moon"></i> <span>Night Vision</span>
         </button>
       </div>
       <h1><i class="fa-solid fa-shield-halved"></i> Lobo Battalion JROTC</h1>
@@ -711,6 +742,7 @@
         <option value="8">Section 8: Physical Fitness & PRT</option>
         <option value="9">Section 9: Uniform & Appearance Standards</option>
         <option value="10">Section 10: Visual Rank Insignia</option>
+        <option value="CUSTOM">Custom Flashcards</option>
       </select>
     </div>
 
@@ -718,7 +750,10 @@
       <div class="pill active" id="filterAll" onclick="setMasteryFilter('ALL')">All Cards</div>
       <div class="pill" id="filterPractice" onclick="setMasteryFilter('PRACTICE')">Needs Practice</div>
       <div class="pill" id="filterMastered" onclick="setMasteryFilter('MASTERED')">Mastered</div>
-      <button class="btn-gold" style="padding: 4px 12px; margin-left: auto; font-size: 0.8rem;" onclick="shuffleCards()">
+      <button class="btn-army" style="padding: 4px 12px; margin-left: auto; font-size: 0.8rem;" onclick="openAddModal()">
+        <i class="fa-solid fa-plus"></i> Add Card
+      </button>
+      <button class="btn-gold" style="padding: 4px 12px; font-size: 0.8rem;" onclick="shuffleCards()">
         <i class="fa-solid fa-shuffle"></i> Shuffle
       </button>
       <button class="btn-army" style="padding: 4px 12px; font-size: 0.8rem;" onclick="resetDeck()">
@@ -813,6 +848,7 @@
             <option value="8">Section 8: Fitness & PRT</option>
             <option value="9">Section 9: Uniform Standards</option>
             <option value="10">Section 10: Ranks</option>
+            <option value="CUSTOM">Custom Material</option>
           </select>
         </div>
         <div class="form-group">
@@ -870,7 +906,6 @@
 
     // High-definition Single-Badge Enlisted Cadet Rank SVG Generator
     function renderEnlistedBadge(chevrons, bars, centerIcon = null) {
-      const svgWidth = 90;
       const baseHeight = 120;
       let paths = '';
 
@@ -886,13 +921,11 @@
           </filter>
         </defs>`;
 
-      // Chevrons (pointing upwards)
       for (let i = 0; i < chevrons; i++) {
         const yOffset = i * 13;
         paths += `<path d="M 12,${30 + yOffset} L 45,10 L 78,${30 + yOffset} L 78,${20 + yOffset} L 45,0 L 12,${20 + yOffset} Z" fill="url(#badgeGold)" stroke="#111" stroke-width="1.2" filter="url(#shadow)"/>`;
       }
 
-      // Center Emblem
       const centerY = chevrons * 13 + 12;
       if (centerIcon === 'diamond') {
         paths += `<polygon points="45,${centerY - 8} 53,${centerY} 45,${centerY + 8} 37,${centerY}" fill="url(#badgeGold)" stroke="#111" stroke-width="1.2"/>`;
@@ -903,7 +936,6 @@
         paths += `<polygon points="45,${centerY - 6} 47,${centerY - 1} 52,${centerY - 1} 48,${centerY + 2} 50,${centerY + 7} 45,${centerY + 4} 40,${centerY + 7} 42,${centerY + 2} 38,${centerY - 1} 43,${centerY - 1}" fill="url(#badgeGold)" stroke="#111" stroke-width="0.8"/>`;
       }
 
-      // Bars (rocker stripes below)
       const barStartY = centerY + (centerIcon ? 14 : 4);
       for (let j = 0; j < bars; j++) {
         const y = barStartY + (j * 9);
@@ -921,22 +953,19 @@
         </div>`;
     }
 
-    // Dataset with tailored distractor options for contextually realistic quiz generation
     const initialCards = [
-      // Section 1: Cadet Creed & General Knowledge
-      { id: "s1_1", section: "1", cat: "Creed & General", q: "What year was the National Defense Act authorizing JROTC passed?", a: "1916", distractors: ["1945", "1973", "1903"] },
-      { id: "s1_2", section: "1", cat: "Creed & General", q: "What do the letters JROTC stand for?", a: "Junior Reserve Officers Training Corps", distractors: ["Joint Reserve Officers Training Command", "Junior ROTC Technical Corps", "Junior Reserve Officer Tactical Cadre"] },
-      { id: "s1_3", section: "1", cat: "Creed & General", q: "What is the mission of JROTC?", a: "To motivate young people to be better citizens.", distractors: ["To train future military officers only.", "To enforce discipline in high schools.", "To prepare cadets for college ROTC scholarships."] },
-      { id: "s1_4", section: "1", cat: "Creed & General", q: "What is the title of the instructor who is in charge of a school's JROTC unit?", a: "Senior Army Instructor (SAI)", distractors: ["Commandant of Cadets", "Army Instructor (AI)", "Battalion Commander"] },
-      { id: "s1_5", section: "1", cat: "Creed & General", q: "What uniform is worn to the Military Ball and/or other formal type function?", a: "Army Class A (Army Blue)", distractors: ["OCP Uniform", "Class B Uniform", "PT Uniform"] },
-      { id: "s1_6", section: "1", cat: "Creed & General", q: "What is the minimum cadet enrollment required for a school to have a JROTC program?", a: "At least 100 cadets or 10% of the student body, whichever is less.", distractors: ["50 cadets or 5% of student body", "200 cadets minimum", "75 cadets minimum"] },
-      { id: "s1_7", section: "1", cat: "Creed & General", q: "In what year was Public Law 93-165 passed allowing females to be counted towards the enrollment requirement for JROTC?", a: "1973", distractors: ["1916", "1964", "1980"] },
-      { id: "s1_8", section: "1", cat: "Creed & General", q: "What does the acronym NCO stand for?", a: "Non-Commissioned Officer", distractors: ["Naval Commissioned Officer", "Non-Combat Officer", "National Cadet Officer"] },
-      { id: "s1_9", section: "1", cat: "Creed & General", q: "Where is the \"position of honor\" where the senior ranking individual always sits or walks?", a: "On the right", distractors: ["On the left", "In the center", "At the front center"] },
-      { id: "s1_10", section: "1", cat: "Creed & General", q: "What are the seven Army Values?", a: "Loyalty, Duty, Respect, Selfless Service, Honor, Integrity, Personal Courage", distractors: ["Honor, Courage, Commitment, Loyalty, Discipline, Truth, Valor", "Duty, Honor, Country, Respect, Leadership, Courage, Teamwork", "Loyalty, Integrity, Valor, Leadership, Service, Discipline, Courage"] },
-      { id: "s1_11", section: "1", cat: "Creed & General", q: "What does LET stand for?", a: "Leadership Education Training", distractors: ["Leadership Executive Tactics", "Leadership Evaluation & Training", "Linear Education Track"] },
+      { id: "s1_1", section: "1", cat: "General", q: "What year was the National Defense Act authorizing JROTC passed?", a: "1916", distractors: ["1945", "1973", "1903"] },
+      { id: "s1_2", section: "1", cat: "General", q: "What do the letters JROTC stand for?", a: "Junior Reserve Officers Training Corps", distractors: ["Joint Reserve Officers Training Command", "Junior ROTC Technical Corps", "Junior Reserve Officer Tactical Cadre"] },
+      { id: "s1_3", section: "1", cat: "General", q: "What is the mission of JROTC?", a: "To motivate young people to be better citizens.", distractors: ["To train future military officers only.", "To enforce discipline in high schools.", "To prepare cadets for college ROTC scholarships."] },
+      { id: "s1_4", section: "1", cat: "General", q: "What is the title of the instructor who is in charge of a school's JROTC unit?", a: "Senior Army Instructor (SAI)", distractors: ["Commandant of Cadets", "Army Instructor (AI)", "Battalion Commander"] },
+      { id: "s1_5", section: "1", cat: "General", q: "What uniform is worn to the Military Ball and/or other formal type function?", a: "Army Class A (Army Blue)", distractors: ["OCP Uniform", "Class B Uniform", "PT Uniform"] },
+      { id: "s1_6", section: "1", cat: "General", q: "What is the minimum cadet enrollment required for a school to have a JROTC program?", a: "At least 100 cadets or 10% of the student body, whichever is less.", distractors: ["50 cadets or 5% of student body", "200 cadets minimum", "75 cadets minimum"] },
+      { id: "s1_7", section: "1", cat: "General", q: "In what year was Public Law 93-165 passed allowing females to be counted towards the enrollment requirement for JROTC?", a: "1973", distractors: ["1916", "1964", "1980"] },
+      { id: "s1_8", section: "1", cat: "General", q: "What does the acronym NCO stand for?", a: "Non-Commissioned Officer", distractors: ["Naval Commissioned Officer", "Non-Combat Officer", "National Cadet Officer"] },
+      { id: "s1_9", section: "1", cat: "General", q: "Where is the \"position of honor\" where the senior ranking individual always sits or walks?", a: "On the right", distractors: ["On the left", "In the center", "At the front center"] },
+      { id: "s1_10", section: "1", cat: "General", q: "What are the seven Army Values?", a: "Loyalty, Duty, Respect, Selfless Service, Honor, Integrity, Personal Courage", distractors: ["Honor, Courage, Commitment, Loyalty, Discipline, Truth, Valor", "Duty, Honor, Country, Respect, Leadership, Courage, Teamwork", "Loyalty, Integrity, Valor, Leadership, Service, Discipline, Courage"] },
+      { id: "s1_11", section: "1", cat: "General", q: "What does LET stand for?", a: "Leadership Education Training", distractors: ["Leadership Executive Tactics", "Leadership Evaluation & Training", "Linear Education Track"] },
 
-      // Section 2: Leadership
       { id: "s2_1", section: "2", cat: "Leadership", q: "Define leadership.", a: "The ability to influence others in order to reach a goal.", distractors: ["Giving orders to subordinates without question.", "Managing administrative resources effectively.", "Setting strict rules and enforcing penalties."] },
       { id: "s2_2", section: "2", cat: "Leadership", q: "Define teamwork.", a: "The cooperative effort on the part of a number of people working together to achieve a goal.", distractors: ["Individual competition to achieve maximum efficiency.", "Following orders from a squad leader without discussion.", "Delegating all responsibilities to team captains."] },
       { id: "s2_3", section: "2", cat: "Leadership", q: "Define \"Integrity\" as a leadership trait.", a: "Integrity is the quality or state of being of sound moral principle; uprightness, honesty, and sincerity.", distractors: ["Strict adherence to military regulations.", "The ability to make quick decisions under pressure.", "Faithfulness to superiors and peers."] },
@@ -944,7 +973,6 @@
       { id: "s2_5", section: "2", cat: "Leadership", q: "Define \"Decisiveness\" as a leadership trait.", a: "Decisiveness is a willingness to act.", distractors: ["Taking extra time to analyze all possibilities.", "Consulting with all team members before acting.", "Relying strictly on higher command for guidance."] },
       { id: "s2_6", section: "2", cat: "Leadership", q: "Define \"Selflessness\" or \"Unselfishness\" as a leadership trait.", a: "Selflessness or unselfishness is the ability to sacrifice personal needs and wants for a greater cause.", distractors: ["Focusing on personal career advancement first.", "Taking all credit for team accomplishments.", "Expecting rewards for routine duties."] },
 
-      // Section 3: Drill & Ceremonies
       { id: "s3_1", section: "3", cat: "Drill & Ceremonies", q: "What are the two parts of a command?", a: "The preparatory command and the command of execution.", distractors: ["The warning command and executive command.", "The direct command and indirect command.", "The primary signal and secondary response."] },
       { id: "s3_2", section: "3", cat: "Drill & Ceremonies", q: "What foot do you call \"To the Rear, March\" or \"Rear, March\" on?", a: "The right foot.", distractors: ["The left foot.", "Either foot.", "Neither foot."] },
       { id: "s3_3", section: "3", cat: "Drill & Ceremonies", q: "On which foot can you give the command \"Halt\"?", a: "Either foot.", distractors: ["Left foot only.", "Right foot only.", "Only when standing at attention."] },
@@ -956,7 +984,6 @@
       { id: "s3_9", section: "3", cat: "Drill & Ceremonies", q: "What is the rate of march for \"Double Time\"?", a: "180 steps per minute.", distractors: ["120 steps per minute.", "200 steps per minute.", "150 steps per minute."] },
       { id: "s3_10", section: "3", cat: "Drill & Ceremonies", q: "What command(s) can be given from the position of \"Parade, Rest\"?", a: "\"Attention\", \"Stand At Ease\", \"At Ease\", or \"Rest\".", distractors: ["Only \"Attention\".", "Only \"Fall Out\".", "\"Eyes Right\" or \"Ready Front\"."] },
 
-      // Section 4: First Aid & Health
       { id: "s4_1", section: "4", cat: "First Aid & Health", q: "What is First Aid?", a: "Immediate temporary care given to an injured or ill person until he or she can get professional help.", distractors: ["Permanent medical treatment provided in hospitals.", "Diagnosing long-term illnesses.", "Surgical intervention in emergency rooms."] },
       { id: "s4_2", section: "4", cat: "First Aid & Health", q: "What do the letters CPR stand for and what is it used for?", a: "Cardiopulmonary Resuscitation is a first aid procedure that combines rescue breaths with chest compressions to restore breathing and circulation.", distractors: ["Cardiovascular Pulse Recovery used for heat stroke.", "Central Pressure Resuscitation for broken bones.", "Circulatory Prevention Rapid response for bleeding."] },
       { id: "s4_3", section: "4", cat: "First Aid & Health", q: "Describe \"Shock\".", a: "A life-threatening condition in which the circulatory system fails to deliver enough blood to vital tissues and organs.", distractors: ["A mild reaction to cold weather.", "A sudden spike in blood pressure due to exercise.", "A temporary muscle spasm after injury."] },
@@ -964,7 +991,6 @@
       { id: "s4_5", section: "4", cat: "First Aid & Health", q: "Describe what is meant by \"universal precautions\".", a: "Actions taken to prevent the spread of disease by treating all blood as if it were contaminated.", distractors: ["Always calling 911 before assessing a patient.", "Wearing full military body armor in emergency zones.", "Using sterile water to clean all wounds."] },
       { id: "s4_6", section: "4", cat: "First Aid & Health", q: "Name two of the six types of nutrients.", a: "Carbohydrates, Proteins, Fats, Vitamins, Minerals, and Water.", distractors: ["Fiber, Sugar, Caffeine, Calcium", "Sodium, Glucose, Electrolytes, Calories", "Amino acids, Enzymes, Saturated Fats, Sugars"] },
 
-      // Section 5: Chain of Command & Government
       { id: "s5_1", section: "5", cat: "Chain of Command", q: "What elected federal government office does the \"Commander-In-Chief\" of our armed forces occupy?", a: "The Office of the President of the United States.", distractors: ["The Secretary of Defense", "The Chairman of the Joint Chiefs of Staff", "The Speaker of the House"] },
       { id: "s5_2", section: "5", cat: "Chain of Command", q: "Who is the Secretary of Defense?", a: "The Honorable Lloyd Austin Jr.", distractors: ["The Honorable Antony Blinken", "General Randy George", "The Honorable Pete Buttigieg"] },
       { id: "s5_3", section: "5", cat: "Chain of Command", q: "Who is the Army Chief of Staff?", a: "General Randy George.", distractors: ["General Mark Milley", "General CQ Brown Jr.", "General James McConville"] },
@@ -973,7 +999,6 @@
       { id: "s5_6", section: "5", cat: "Chain of Command", q: "What are the three branches of the United States military and what is their order of formation?", a: "United States Army, United States Navy, and United States Air Force.", distractors: ["United States Marine Corps, Army, Navy", "Air Force, Navy, Army", "Army, Coast Guard, Space Force"] },
       { id: "s5_7", section: "5", cat: "Chain of Command", q: "What branch of the United States military is the United States Marine Corps actually a part of?", a: "The United States Navy.", distractors: ["The United States Army", "The United States Air Force", "An independent cabinet department"] },
 
-      // Section 6: Military Customs & Courtesies
       { id: "s6_1", section: "6", cat: "Customs & Courtesies", q: "Who wrote the \"Star-Spangled Banner\"?", a: "Francis Scott Key.", distractors: ["John Philip Sousa", "George Washington", "Thomas Jefferson"] },
       { id: "s6_2", section: "6", cat: "Customs & Courtesies", q: "What do the 13 stripes on the United States flag represent?", a: "The 13 original colonies.", distractors: ["The 13 signers of the Declaration of Independence", "The 13 original battles of the Revolution", "The 13 military departments"] },
       { id: "s6_3", section: "6", cat: "Customs & Courtesies", q: "The signal for the start of the official duty day is called what?", a: "Reveille.", distractors: ["Retreat", "Taps", "To the Color"] },
@@ -984,7 +1009,6 @@
       { id: "s6_8", section: "6", cat: "Customs & Courtesies", q: "What do the colors on the United States Flag represent?", a: "Blue = vigilance, perseverance, and justice.<br>Red = hardiness and valor.<br>White = purity and innocence.", distractors: ["Blue = oceans, Red = blood, White = peace", "Blue = loyalty, Red = bravery, White = freedom", "Blue = truth, Red = sacrifice, White = liberty"] },
       { id: "s6_9", section: "6", cat: "Customs & Courtesies", q: "How many stripes were on the United States Flag that flew at Fort McHenry when Francis Scott Key wrote our National Anthem and what did each stripe represent?", a: "Fifteen, and each stripe represented one of the now fifteen colonies.", distractors: ["Thirteen original colonies", "Fifty current states", "Twenty states in the Union"] },
 
-      // Section 7: Military History & Civics
       { id: "s7_1", section: "7", cat: "History & Civics", q: "Who were our primary antagonists during World War I?", a: "Germany, Austria, and Hungary.", distractors: ["Germany, Italy, and Japan", "Russia, China, and Korea", "Great Britain, France, and Spain"] },
       { id: "s7_2", section: "7", cat: "History & Civics", q: "Who were our primary antagonists during World War II?", a: "Germany, Italy, and Japan.", distractors: ["Germany, Austria, and Hungary", "Russia, China, and Vietnam", "Spain, Mexico, and Britain"] },
       { id: "s7_3", section: "7", cat: "History & Civics", q: "What happened on December 7th, 1941 in Hawaii?", a: "The Japanese attacked Pearl Harbor.", distractors: ["The D-Day invasion took place.", "The signing of the armistice.", "The end of World War II."] },
@@ -1000,13 +1024,11 @@
       { id: "s7_13", section: "7", cat: "History & Civics", q: "What are the two ways individuals may become American citizens?", a: "By being born or naturalized in the United States.", distractors: ["By military service or paying taxes", "By employment or residency for 1 year", "By executive order or passport application"] },
       { id: "s7_14", section: "7", cat: "History & Civics", q: "Define \"Naturalization\" as it applies to becoming an American citizen.", a: "The legal process by which foreigners can choose to become American citizens.", distractors: ["Automatic citizenship upon marriage.", "Receiving temporary work visas.", "Registering for military selective service."] },
 
-      // Section 8: Physical Fitness & PRT
       { id: "s8_1", section: "8", cat: "Fitness & PRT", q: "What are the five events of the Cadet Challenge?", a: "Shuttle Run, Pull Ups, Sit in Reach, Curl Ups, One Mile Run.", distractors: ["Push-ups, Sit-ups, 2-Mile Run, Planks, Squats", "100m Sprint, Long Jump, High Jump, Shot Put, Mile Run", "Push-ups, Pull-ups, Burpees, Running, Swimming"] },
       { id: "s8_2", section: "8", cat: "Fitness & PRT", q: "What are the ten PRT drills?", a: "Bend and Reach, Rear Lunge, High Jumper, Rower, Squat Bender, Windmill, Forward Lunge, Prone Row, Bent Leg Body Twist, Push Up.", distractors: ["Jumping Jacks, Squats, Lunges, Burpees, Planks, Mountain Climbers, Sit-ups, Push-ups, High Knees, Sprint", "Arm Circles, Half-Jacks, High Jumper, Push Up, Sit Up, Calf Raises, Neck Rotations, Toe Touches, Lunges, Burpees"] },
       { id: "s8_3", section: "8", cat: "Fitness & PRT", q: "What is the Cadence for all PRT drills?", a: "Slow Cadence except for the High Jumper and Push Up which are done in a Moderate Cadence.", distractors: ["Fast Cadence for all exercises", "Moderate Cadence for all exercises", "Slow Cadence for all 10 exercises without exception"] },
       { id: "s8_4", section: "8", cat: "Fitness & PRT", q: "What is the definition of the term Cadet Challenge?", a: "A physical fitness test that consists of five exercises taken from the Cadet Challenge program.", distractors: ["An annual obstacle course competition.", "A 10-mile ruck march challenge.", "A drill and ceremony inspection competition."] },
 
-      // Section 9: Uniform Standards
       { id: "s9_1", section: "9", cat: "Uniform Standards", q: "What does ACSU stand for?", a: "Army Cadet Service Uniform", distractors: ["Army Combat Readiness Uniform", "American Cadet Style Uniform", "Army Ceremonial Service Unit"] },
       { id: "s9_2", section: "9", cat: "Uniform Standards", q: "What type of shirt is worn under the Army Service Uniform Coat?", a: "Gray long sleeve or short sleeve shirt", distractors: ["White dress shirt", "Black t-shirt", "Tan tactical shirt"] },
       { id: "s9_3", section: "9", cat: "Uniform Standards", q: "The black necktie/neck tab is optional when wearing what type of uniform?", a: "Class B uniform with short sleeves", distractors: ["Class A coat", "Formal Dress Blue uniform", "OCP uniform"] },
@@ -1021,12 +1043,11 @@
       { id: "s9_12", section: "9", cat: "Uniform Standards", q: "How often must a uniform be worn by cadets?", a: "At least once per week.", distractors: ["Every school day", "Twice per month", "Only during inspections"] },
       { id: "s9_13", section: "9", cat: "Uniform Standards", q: "Can a male cadet wear an earring while in uniform?", a: "No.", distractors: ["Yes, if small gold studs", "Yes, on left ear only", "Only during social events"] },
       { id: "s9_14", section: "9", cat: "Uniform Standards", q: "How should the nameplate be worn on your uniform?", a: "Male Cadets: Center the nameplate on the right pocket between the top of pocket and the top of the button.<br><br>Female cadets: 1-2 inches above the top button centered horizontally on the right side of the shirt or coat.", distractors: ["On the left pocket 1/8 inch above ribbons", "Centered on the left lapel", "Flush with top collar seam"] },
-      { id: "s9_15", section: "9", cat: "Uniform Standards", q: "What's the measurements of the Honor Unit of Distinguish star, unit crest and ribbons?", a: "1/4, 1/4, and 1/8 of an inch.", distractors: ["1/2, 1/2, and 1/4 of an inch", "1/8, 1/8, and 1/16 of an inch", "1 inch, 1/2 inch, and 1/4 inch"] },
+      { id: "s9_15", section: "9", cat: "Uniform Standards", q: "What's the measurements of the Honor Unit with Distinction star, unit crest and ribbons?", a: "1/4, 1/4, and 1/8 of an inch.", distractors: ["1/2, 1/2, and 1/4 of an inch", "1/8, 1/8, and 1/16 of an inch", "1 inch, 1/2 inch, and 1/4 inch"] },
       { id: "s9_16", section: "9", cat: "Uniform Standards", q: "How should the hair be for males and females?", a: "For males: no more than 2 inches of bulk, sideburns cannot pass the second opening of the ear, hair cannot touch ears and may not pass the eye brows, no beard unless there's a medical condition, mustache may not pass the corners of the lips or touch the lips.<br><br>Females: slick back in a bun or ponytail.", distractors: ["Males: shaved head required; Females: short hair above collar only", "Males: 3 inches bulk allowed; Females: braid down past waist allowed", "No regulations as long as neat"] },
       { id: "s9_17", section: "9", cat: "Uniform Standards", q: "What way is the male belt routed?", a: "To the left.", distractors: ["To the right.", "Either direction.", "Through back loop first."] },
       { id: "s9_18", section: "9", cat: "Uniform Standards", q: "What way is the female belt routed?", a: "To the right.", distractors: ["To the left.", "Either direction.", "Through side loop first."] },
 
-      // Section 10: Visual Rank Insignia
       { id: "s10_1", section: "10", cat: "Officer Ranks", q: "Identify Officer Rank: Three Diamonds" + renderOfficerGraphics('diamond', 3), a: "Colonel (c/COL)", distractors: ["Lieutenant Colonel (c/LTC)", "Major (c/MAJ)", "Captain (c/CPT)"] },
       { id: "s10_2", section: "10", cat: "Officer Ranks", q: "Identify Officer Rank: Two Diamonds" + renderOfficerGraphics('diamond', 2), a: "Lieutenant Colonel (c/LTC)", distractors: ["Colonel (c/COL)", "Major (c/MAJ)", "First Lieutenant (c/1LT)"] },
       { id: "s10_3", section: "10", cat: "Officer Ranks", q: "Identify Officer Rank: One Diamond" + renderOfficerGraphics('diamond', 1), a: "Major (c/MAJ)", distractors: ["Colonel (c/COL)", "Lieutenant Colonel (c/LTC)", "Captain (c/CPT)"] },
@@ -1048,21 +1069,19 @@
     let allCards = [];
     let currentDeck = [];
     let currentIndex = 0;
-    let masteryFilter = 'ALL'; // 'ALL', 'PRACTICE', 'MASTERED'
+    let masteryFilter = 'ALL';
     let masteryState = JSON.parse(localStorage.getItem('jrotc_mastery_state') || '{}');
 
-    // Quiz Mode State
     let quizQuestions = [];
     let currentQuizIndex = 0;
     let quizScore = 0;
     let selectedAnswer = false;
+    let currentQuizOptions = [];
 
-    // Load initial data and custom cards
     function initApp() {
       const customCards = JSON.parse(localStorage.getItem('jrotc_custom_cards') || '[]');
       allCards = [...initialCards, ...customCards];
       
-      // Load Theme
       if (localStorage.getItem('jrotc_theme') === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         const themeBtn = document.getElementById('themeToggleBtn');
@@ -1123,7 +1142,6 @@
       updateMasteryButtons(card.id);
       updateMasteryStats();
 
-      // If active filter isolates practice or mastered, re-filter
       if (masteryFilter !== 'ALL') {
         applyFilters();
       } else {
@@ -1174,20 +1192,17 @@
       const searchVal = document.getElementById('searchInput').value.toLowerCase().trim();
 
       currentDeck = allCards.filter(card => {
-        // Section Filter
         let matchesSection = false;
         if (sectionVal === 'ALL') matchesSection = true;
         else if (sectionVal === 'CUSTOM') matchesSection = card.section === 'CUSTOM';
         else matchesSection = card.section === sectionVal;
 
-        // Mastery Filter
         let matchesMastery = false;
         const status = masteryState[card.id];
         if (masteryFilter === 'ALL') matchesMastery = true;
         else if (masteryFilter === 'PRACTICE') matchesMastery = status === 'practice';
         else if (masteryFilter === 'MASTERED') matchesMastery = status === 'mastered';
 
-        // Search Query
         const textContent = (card.q + ' ' + card.a + ' ' + card.cat).toLowerCase();
         const matchesSearch = searchVal === '' || textContent.includes(searchVal);
 
@@ -1235,9 +1250,17 @@
     }
 
     function startQuiz() {
-      const availableCards = currentDeck.length > 3 ? currentDeck : allCards;
-      const shuffled = [...availableCards].sort(() => 0.5 - Math.random());
-      quizQuestions = shuffled.slice(0, Math.min(10, shuffled.length));
+      quizQuestions = [];
+      const sections = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+
+      sections.forEach(sec => {
+        const sectionCards = allCards.filter(c => c.section === sec);
+        const shuffled = [...sectionCards].sort(() => 0.5 - Math.random());
+        quizQuestions.push(...shuffled.slice(0, 2));
+      });
+
+      // Shuffle the selected 20 questions so they are randomly ordered across sections
+      quizQuestions.sort(() => 0.5 - Math.random());
       
       currentQuizIndex = 0;
       quizScore = 0;
@@ -1254,53 +1277,52 @@
       }
 
       const qCard = quizQuestions[currentQuizIndex];
-      let options = [];
 
       if (qCard.distractors && qCard.distractors.length >= 3) {
-        options = [qCard.a, ...qCard.distractors.slice(0, 3)];
+        currentQuizOptions = [qCard.a, ...qCard.distractors.slice(0, 3)];
       } else {
         const otherAnswers = allCards
           .filter(c => c.id !== qCard.id)
-          .map(c => c.a.replace(/<[^>]*>?/gm, ''));
+          .map(c => c.a);
         const shuffledOthers = otherAnswers.sort(() => 0.5 - Math.random()).slice(0, 3);
-        options = [qCard.a, ...shuffledOthers];
+        currentQuizOptions = [qCard.a, ...shuffledOthers];
       }
 
-      // Shuffle options
-      options.sort(() => 0.5 - Math.random());
+      currentQuizOptions.sort(() => 0.5 - Math.random());
 
       let html = `
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-          <span class="category-tag">${qCard.cat}</span>
+          <span class="category-tag">Section ${qCard.section}: ${qCard.cat}</span>
           <span style="font-weight:700; color:var(--text-muted); font-size:0.85rem;">Question ${currentQuizIndex + 1} of ${quizQuestions.length}</span>
         </div>
         <div class="quiz-question">${qCard.q}</div>
         <div class="options-grid">
       `;
 
-      options.forEach(opt => {
-        const cleanOpt = opt.replace(/"/g, '&quot;');
-        const cleanCorrect = qCard.a.replace(/"/g, '&quot;');
-        html += `<button class="option-btn" onclick="checkQuizAnswer(this, '${cleanOpt}', '${cleanCorrect}')">${opt}</button>`;
+      currentQuizOptions.forEach((opt, idx) => {
+        html += `<button class="option-btn" onclick="checkQuizAnswer(this, ${idx})">${opt}</button>`;
       });
 
       html += `</div>`;
       document.getElementById('quizContainer').innerHTML = html;
     }
 
-    function checkQuizAnswer(btnEl, selectedOpt, correctOpt) {
+    function checkQuizAnswer(btnEl, selectedIndex) {
       if (selectedAnswer) return;
       selectedAnswer = true;
 
+      const qCard = quizQuestions[currentQuizIndex];
+      const selectedOpt = currentQuizOptions[selectedIndex];
       const buttons = document.querySelectorAll('.option-btn');
-      buttons.forEach(btn => {
+
+      buttons.forEach((btn, idx) => {
         btn.disabled = true;
-        if (btn.innerText.trim() === correctOpt.replace(/<[^>]*>?/gm, '').trim()) {
+        if (currentQuizOptions[idx] === qCard.a) {
           btn.classList.add('correct');
         }
       });
 
-      if (selectedOpt.trim() === correctOpt.trim()) {
+      if (selectedOpt === qCard.a) {
         quizScore++;
       } else {
         btnEl.classList.add('incorrect');
@@ -1325,7 +1347,7 @@
       document.getElementById('quizContainer').innerHTML = `
         <div class="quiz-summary">
           <i class="fa-solid fa-award" style="font-size: 3.5rem; color: var(--army-gold);"></i>
-          <h2 style="margin-top: 10px;">Board Examination Complete</h2>
+          <h2 style="margin-top: 10px; font-family: 'Black Ops One', cursive, sans-serif;">Board Examination Complete</h2>
           <div class="score-badge">${percentage}%</div>
           <div class="rank-title">Achieved Rank: ${rankTitle}</div>
           <p style="color: var(--text-muted); font-weight: 600; margin-bottom: 20px;">
@@ -1349,7 +1371,6 @@
       if (!card) return;
 
       const rawText = face === 'front' ? card.q : card.a;
-      // Strip HTML tags for smooth audio playback
       const cleanText = rawText.replace(/<[^>]*>?/gm, '');
 
       const utterance = new SpeechSynthesisUtterance(cleanText);
@@ -1401,8 +1422,7 @@
 
       allCards.push(newCard);
       closeAddModal();
-      
-      // Reset Form
+
       document.getElementById('newCategory').value = '';
       document.getElementById('newQuestion').value = '';
       document.getElementById('newAnswer').value = '';
@@ -1413,6 +1433,9 @@
     function setupKeyboardControls() {
       document.addEventListener('keydown', (e) => {
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') return;
+
+        const isFlashcardView = document.getElementById('flashcardView').style.display !== 'none';
+        if (!isFlashcardView) return;
 
         if (e.code === 'Space') {
           e.preventDefault();
@@ -1429,8 +1452,15 @@
       });
     }
 
-    // Initialize application when DOM is ready
-    window.onload = initApp;
+    // Initialize as soon as DOM content is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }
   </script>
+<!-- Static App Form Collection Script -->
+<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
+<script src="https://static.app/js/static.js" type="text/javascript"></script>
 </body>
 </html>
